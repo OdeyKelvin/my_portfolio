@@ -64,7 +64,7 @@ const Home = () => {
 						<span>Tech Enthusiast</span>
 					</div>
 					<div className="home-elements-container">
-						<Link to={`/project`}>
+						<Link to={`/projects`}>
 							<div className="home-projects">
 								<div className="home-projects-white">
 									<i className="fas fa-diagram-project"></i>
