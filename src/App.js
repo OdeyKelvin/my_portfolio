@@ -19,6 +19,7 @@ import Projects from './Components/Projects';
 import Error from './Components/Error';
 import Blur from './Components/Blur';
 import Submit from './Components/Submit';
+import Screen from './Components/Screen';
 function App() {
 	return (
 		<HashRouter>
@@ -36,6 +37,7 @@ function App() {
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/submit" element={<Submit />} />
 					<Route path="/about" element={<About />} />
+					<Route path="/screen" element={<Screen />} />
 					<Route path="*" element={<Error />} />
 				</Routes>
 				<Sidenav />

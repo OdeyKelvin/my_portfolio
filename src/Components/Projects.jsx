@@ -5,10 +5,8 @@ import metaverse from '../images/magVerse.jpg';
 import snap from '../images/snap.jpg';
 import aptlearn from '../images/aptlearn.jpg';
 import Project from './Project';
+// import { InView } from 'react-intersection-observer';
 
-// const Project = (props) => {
-
-// };
 const Projects = () => {
 	return (
 		<article className="project">

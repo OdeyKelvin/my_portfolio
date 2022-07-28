@@ -28,6 +28,16 @@ body {
 	overflow-x: hidden;
 	position: relative;
 }
+.screen{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-size: 5vw;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
 .blur {
 	display: none;
 }
@@ -840,6 +850,10 @@ textarea {
 	color: black;
 }
 @media (max-width: 1000px) {
+	.screen{
+		font-size: 10vw;
+		width: 90%;
+	}
 	.bg-style-container,
 	.bg-style-xsmall,
 	.bg-style-small,
