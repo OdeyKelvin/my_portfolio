@@ -1,6 +1,6 @@
 import {
-	// BrowserRouter as Router,
-	HashRouter,
+	BrowserRouter as Router,
+	// HashRouter,
 	Routes,
 	Route,
 } from 'react-router-dom';
@@ -22,8 +22,7 @@ import Submit from './Components/Submit';
 import Screen from './Components/Screen';
 function App() {
 	return (
-		<HashRouter>
-			{/* <Router> */}
+		<Router>
 			<div className="App">
 				<ScrollToTop />
 				<Navbar />
@@ -42,8 +41,7 @@ function App() {
 				</Routes>
 				<Sidenav />
 			</div>
-			{/* </Router> */}
-		</HashRouter>
+		</Router>
 	);
 }
 

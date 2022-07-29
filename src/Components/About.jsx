@@ -19,9 +19,9 @@ const About = () => {
 						development experience. I spend my whole day, practically everyday
 						expanding my skills, I love getiing my hands on projects that looks
 						complex to me and its fun been able to complete it at the end. I
-						have experience with HTML, CSS, JavaScript JQuery, React and React
+						have experience with HTML, CSS, JavaScript, JQuery, React and React
 						Native and I've built different projects and UI landing pages with
-						them. I'm interested in anything tech and currently expanding my
+						them. I'm interested in all things tech and currently expanding my
 						knowledge and skillset. I'm also an undergraguate student studying
 						Computer Engineering in Bayero University, Kano, I'm currntly open
 						up to work and Interships paid or unpaid.
