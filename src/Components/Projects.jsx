@@ -14,7 +14,7 @@ const Projects = () => {
 			<h1>Projects Preview</h1>
 			<section className="previews-section">
 				<Project
-					link="https://geekycoder25.github.io/Qoreebullah-Portfolio/"
+					link="https://qoreeb.vercel.app/"
 					img={qoreeb}
 					src={'https://github.com/GeekyCoder25/Qoreebullah-Portfolio/'}
 					srctext={'here'}
