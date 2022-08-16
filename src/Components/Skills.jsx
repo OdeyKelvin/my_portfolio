@@ -4,8 +4,8 @@ import js from '../images/JS.png';
 import react from '../images/react.png';
 import jquery from '../images/jquery.svg';
 import git from '../images/git.svg';
-import sql from '../images/sql.jpg';
-import php from '../images/php.png';
+import typescript from '../images/typescript.png';
+import next from '../images/next.png';
 import Socials from './Socials';
 import Footer from './Footer';
 
@@ -31,13 +31,17 @@ const Skills = () => {
 						<img src={react} alt="react" />
 						React
 					</p>
-					<p className="image php-logo">
-						<img src={php} alt="php" />
-						php
+					<p className="image next-logo">
+						<img src={next} alt="next" />
+						Next JS
 					</p>
 					<p className="image jq-logo">
 						<img src={jquery} alt="jquery" />
 						Jquery
+					</p>
+					<p className=" typescript-logo">
+						<img src={typescript} alt="typescipt" />
+						TypeScript
 					</p>
 					<p className="image react-logo">
 						<img src={react} alt="react" />
@@ -46,10 +50,6 @@ const Skills = () => {
 					<p className="image">
 						<img src={git} alt="git" />
 						GIT
-					</p>
-					<p className=" sql-logo">
-						<img src={sql} alt="git" />
-						SQL
 					</p>
 				</section>
 				<section className="work-exp">

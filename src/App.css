@@ -28,7 +28,7 @@ body {
 	overflow-x: hidden;
 	position: relative;
 }
-.screen{
+.screen {
 	display: flex;
 	height: 100vh;
 	justify-content: center;
@@ -72,7 +72,7 @@ main > img {
 	z-index: -9;
 	position: absolute;
 	top: 0;
-	min-height: 101%;
+	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -539,8 +539,11 @@ article > h1 {
 .skills .jq-logo {
 	background-color: rgb(245, 250, 233);
 }
-.skills .sql-logo {
-	background-color: rgb(255, 248, 191);
+.skills .next-logo {
+	background-color: rgb(222, 229, 238);
+}
+.skills .typescript-logo {
+	background-color: rgb(180, 204, 235);
 }
 .skills .work-exp {
 	width: 40%;
@@ -713,6 +716,9 @@ textarea {
 	background: transparent;
 	resize: none;
 }
+.contact textarea::placeholder {
+	font-family: Arial, Helvetica, sans-serif;
+}
 .contact select option {
 	width: 50px;
 }
@@ -737,7 +743,7 @@ textarea {
 .previews-section {
 	display: flex;
 	align-items: center;
-	height: 100%;
+	height: 70%;
 	min-height: 80vh;
 	overflow: scroll;
 	padding: 50px;
@@ -747,6 +753,7 @@ textarea {
 	overflow-y: scroll;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+	scroll-behavior: smooth;
 }
 .previews-section::-webkit-scrollbar {
 	display: none;
@@ -764,13 +771,50 @@ textarea {
 	text-decoration: underline;
 }
 .previews-logo {
-	/* transform: translateX(-50%); */
-	/* width: 70%; */
 	border-radius: 10px;
 	max-height: 50vh;
 	max-width: 40vw;
 	box-shadow: 20px 100px 50px rgb(179, 179, 179);
-	/* transform: scale(1.5); */
+}
+.project .projects-angles:hover {
+	animation: none;
+}
+.project .projects-angles {
+	position: absolute;
+	bottom: 30px;
+	font-size: 50px;
+	text-align: center;
+	cursor: pointer;
+}
+.project .projects-angles-left {
+	left: 47%;
+	animation: projects-angles-arrow-left 2s infinite ease;
+}
+.project .projects-angles-right {
+	left: 52%;
+	animation: projects-angles-arrow-right 2s infinite ease;
+}
+@keyframes projects-angles-arrow-left {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes projects-angles-arrow-right {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(20px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 .first-page,
 .error {
@@ -850,7 +894,7 @@ textarea {
 	color: black;
 }
 @media (max-width: 1000px) {
-	.screen{
+	.screen {
 		font-size: 10vw;
 		width: 90%;
 	}
@@ -1137,6 +1181,10 @@ textarea {
 		width: 100%;
 		margin: auto;
 		box-shadow: unset;
+	}
+
+	.project .projects-angles {
+		display: none;
 	}
 	.bg-style-container img {
 		width: 100%;

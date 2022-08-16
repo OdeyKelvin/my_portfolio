@@ -15,7 +15,7 @@ const About = () => {
 				<img src={profile} alt="" />
 				<div>
 					<p>
-						A Frontend web developer with over 2 years of frontend web
+						A Frontend web developer with 3 years of web
 						development experience. I spend my whole day, practically everyday
 						expanding my skills, I love getiing my hands on projects that looks
 						complex to me and its fun been able to complete it at the end. I

@@ -42,61 +42,59 @@ const Home = () => {
 	};
 
 	return (
-		<>
-			<main>
-				<img src={narutoPull} alt="narutoPull" />
-				<section className="bg-style-container">
-					<div className="bg-style-small"></div>
-					<div className="bg-style-xsmall"></div>
-					<div className="bg-style"></div>
-					<div className="bg-style-small bg-style-small-half"></div>
-					<img src={profile} alt="profile" />
-				</section>
-				<article className="home-page">
-					<div className="hello">
-						<i>👋</i>
-						<span>
-							Hello, I am <br /> <b>Toyib</b>
-						</span>
-					</div>
-					<div className="hello-sub">
-						<span>Frontend developer</span>
-						<span>Tech Enthusiast</span>
-					</div>
-					<div className="home-elements-container">
-						<Link to={`/projects`}>
-							<div className="home-projects">
-								<div className="home-projects-white">
-									<i className="fas fa-diagram-project"></i>
-								</div>
-								Projects
+		<main>
+			<img src={narutoPull} alt='narutoPull' />
+			<section className='bg-style-container'>
+				<div className='bg-style-small'></div>
+				<div className='bg-style-xsmall'></div>
+				<div className='bg-style'></div>
+				<div className='bg-style-small bg-style-small-half'></div>
+				<img src={profile} alt='profile' />
+			</section>
+			<article className='home-page'>
+				<div className='hello'>
+					<i>👋</i>
+					<span>
+						Hello, I am <br /> <b>Toyib</b>
+					</span>
+				</div>
+				<div className='hello-sub'>
+					<span>Fullstack developer</span>
+					<span>Tech Enthusiast</span>
+				</div>
+				<div className='home-elements-container'>
+					<Link to={`/projects`}>
+						<div className='home-projects'>
+							<div className='home-projects-white'>
+								<i className='fas fa-diagram-project'></i>
 							</div>
-						</Link>
-						<Link to={`/about`}>
-							<div className="home-about">
-								<img src={profile} alt="profile" />
-								About
+							Projects
+						</div>
+					</Link>
+					<Link to={`/about`}>
+						<div className='home-about'>
+							<img src={profile} alt='profile' />
+							About
+						</div>
+					</Link>
+					<Link to={`/contact`}>
+						<div className='home-contact'>
+							<div className='home-contact-white'>
+								<i
+									className='fas fa-address-book'
+									onMouseOver={handleHomeContact}
+									onMouseLeave={handleHomeContactRemove}
+								></i>
 							</div>
-						</Link>
-						<Link to={`/contact`}>
-							<div className="home-contact">
-								<div className="home-contact-white">
-									<i
-										className="fas fa-address-book"
-										onMouseOver={handleHomeContact}
-										onMouseLeave={handleHomeContactRemove}
-									></i>
-								</div>
-								Contact
-							</div>
-						</Link>
-						<audio src={ohayo} id="audio1"></audio>
-					</div>
-					<Socials />
-					<Footer />
-				</article>
-			</main>
-		</>
+							Contact
+						</div>
+					</Link>
+					<audio src={ohayo} id='audio1'></audio>
+				</div>
+				<Socials />
+				<Footer />
+			</article>
+		</main>
 	);
 };
 
