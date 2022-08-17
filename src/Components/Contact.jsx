@@ -95,7 +95,9 @@ const Contact = () => {
 				</a>
 			</section>
 			<section className="qrcode">
-				<img src={qrcode} alt="qrcode" />
+				<a href="https://wa.link/acx3ha" target="_blank" rel="noreferrer">
+					<img src={qrcode} alt="qrcode" />
+				</a>
 			</section>
 			<Socials />
 			<Footer />
