@@ -1,6 +1,7 @@
 import message from '../images/message.jpg';
 import phone from '../images/phone.png';
-import profile from '../images/profile.png'
+import profile from '../images/profile.png';
+import qrcode from '../images/qrcode.png';
 import Footer from './Footer';
 import Socials from './Socials';
 // import Submit from './Submit';
@@ -24,7 +25,7 @@ const Contact = () => {
 				<input
 					type="hidden"
 					name="_next"
-					value="https://geekycoder25.github.io/portfolio2/#/submit"
+					value="https://toyib.vercel.app/submit"
 				/>
 				<input
 					type="hidden"
@@ -92,6 +93,9 @@ const Contact = () => {
 					<i className="fab fa-facebook"></i>
 					Facebook
 				</a>
+			</section>
+			<section className="qrcode">
+				<img src={qrcode} alt="qrcode" />
 			</section>
 			<Socials />
 			<Footer />

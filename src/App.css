@@ -737,8 +737,33 @@ textarea {
 	padding-bottom: 3px;
 	border-bottom: 1px solid rgb(36, 51, 187);
 }
+
 .contact .contact-social-links {
 	display: none;
+}
+.contact .qrcode {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 200px;
+}
+.contact .qrcode img {
+	width: 200px;
+	height: 100%;
+	display: inline;
+	justify-content: center;
+}
+.submit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 30px;
+	height: 100%;
+	min-height: 100vh;
+	width: 50%;
+	margin: auto;
 }
 .previews-section {
 	display: flex;
@@ -1157,9 +1182,15 @@ textarea {
 	.contact .contact-social-links img {
 		width: 20px;
 	}
+	.contact .qrcode {
+		display: block;
+		position: absolute;
+		bottom: 20px;
+		right: 10%;
+		width: fit-content;
+	}
 	.submit {
-		text-align: justify;
-		font-size: 30px;
+		width: 90%;
 	}
 	.previews-section {
 		flex-direction: column;
