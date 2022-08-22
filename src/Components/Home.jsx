@@ -18,7 +18,7 @@ const Home = () => {
 		const mousePosX = event.pageX;
 		const mousePosY = event.pageY;
 
-		let emousePos;
+		let emousePos = 0;
 		if (mousePosY > halfHeight - 150 && mousePosY < halfHeight + 250) {
 			mousePosX > halfWidth ? (emousePos = 90) : (emousePos = -90);
 		} else if (mousePosX > halfWidth - 100 && mousePosX < halfWidth + 300) {
