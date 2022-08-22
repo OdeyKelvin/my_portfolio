@@ -9,7 +9,6 @@ import './fontawesome-free-6.1.1-web/css/all.css';
 import ScrollToTop from './Components/ScrollToTop';
 import Firstpage from './Components/Firstpage';
 import Home from './Components/Home';
-import Navbar from './Components/Navbar';
 import Certificates from './Components/Certificates';
 import Skills from './Components/Skills';
 import Sidenav from './Components/Sidenav';
@@ -20,12 +19,12 @@ import Error from './Components/Error';
 import Blur from './Components/Blur';
 import Submit from './Components/Submit';
 import Screen from './Components/Screen';
+import Resume from './Components/Resume';
 function App() {
 	return (
 		<Router>
 			<div className="App">
 				<ScrollToTop />
-				<Navbar />
 				<Blur />
 				<Routes>
 					<Route path="/" element={<Firstpage />} />
@@ -37,6 +36,7 @@ function App() {
 					<Route path="/submit" element={<Submit />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/screen" element={<Screen />} />
+					<Route path="/resume" element={<Resume />} />
 					<Route path="*" element={<Error />} />
 				</Routes>
 				<Sidenav />

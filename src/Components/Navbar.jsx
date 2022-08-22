@@ -4,14 +4,16 @@ const Navbar = () => {
 	const { pathname } = useLocation();
 	let width = window.innerWidth;
 	const handleMenu = () => {
+		const navbar = document.querySelector('nav');
 		const navlinks = document.querySelector('.navlinks');
-		let alinks = document.querySelectorAll('nav ul li');
-		let bars = document.querySelector('.bars');
-		let close = document.querySelector('.xmark');
+		const alinks = document.querySelectorAll('nav ul li');
+		const bars = document.querySelector('.bars');
+		const close = document.querySelector('.xmark');
 		bars.style.display = 'none';
 		close.style.display = 'flex';
 		navlinks.classList.add('navactive');
-		alinks.forEach((i) => i.classList.add('alinks'));
+		alinks.forEach(i => i.classList.add('alinks'));
+		navbar.classList.add('navbackdropfilterunset');
 		const blur = document.querySelector('.blur');
 		if (width <= 1000) blur.classList.add('bluractive');
 	};
@@ -26,6 +28,7 @@ const Navbar = () => {
 		}
 	}, [pathname]);
 	const handleClose = () => {
+		const navbar = document.querySelector('nav');
 		const navlinks = document.querySelector('.navlinks');
 		let alinks = document.querySelectorAll('nav ul li');
 		let bars = document.querySelector('.bars');
@@ -33,9 +36,10 @@ const Navbar = () => {
 		bars.style.display = 'flex';
 		close.style.display = 'none';
 		navlinks.classList.remove('navactive');
-		alinks.forEach((i) => i.classList.remove('alinks'));
+		alinks.forEach(i => i.classList.remove('alinks'));
 		const blur = document.querySelector('.blur');
 		blur.classList.remove('bluractive');
+		navbar.classList.remove('navbackdropfilterunset');
 	};
 	useEffect(() => {
 		const blur = document.querySelector('.blur');
@@ -48,14 +52,12 @@ const Navbar = () => {
 		let navheader = document.querySelector('nav h1');
 		let navheaderstroke = document.querySelectorAll('nav h1 span');
 		window.addEventListener('scroll', () => {
-			if (window.scrollY > 100 && width <= 1000) {
+			if (window.scrollY > 50 && width <= 1000) {
 				navbar.classList.add('navscrollmobile');
 				navheader.classList.add('navheader');
 				navheaderstroke[1].classList.replace('ib', 'navheaderstroke');
-			} else if (window.scrollY > 100 && width > 1000) {
+			} else if (window.scrollY > 50 && width > 1000) {
 				navbar.classList.add('navscroll');
-				// } else if (window.scrollY > !100 && width > 1000) {
-				// 	navbar.classList.remove('navscroll');
 			} else {
 				navbar.classList.remove('navscrollmobile');
 				navheader.classList.remove('navheader');
@@ -71,12 +73,12 @@ const Navbar = () => {
 			let bars = document.querySelector('.bars');
 			let close = document.querySelector('.xmark');
 			let alinks = document.querySelectorAll('nav ul li');
-			alinks.forEach((i) => {
+			alinks.forEach(i => {
 				i.addEventListener('click', () => {
 					links.classList.remove('navactive');
 					bars.style.display = 'flex';
 					close.style.display = 'none';
-					alinks.forEach((i) => {
+					alinks.forEach(i => {
 						i.classList.remove('alinks');
 						blur.classList.remove('bluractive');
 					});
