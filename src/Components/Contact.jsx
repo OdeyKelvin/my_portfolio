@@ -1,13 +1,50 @@
+import { useState } from 'react';
 import message from '../images/message.jpg';
 import phone from '../images/phone.png';
-import profile from '../images/profile.png';
 import qrcode from '../images/qrcode.png';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import Socials from './Socials';
 
 const Contact = () => {
-	const nameInavalid = () => {};
+	const [namevalid, setNamevalid] = useState('');
+	const [emailvalid, setEmailvalid] = useState('');
+	const [messagevalid, setMessagevalid] = useState('');
+	const nameInvalid = e => {
+		e.preventDefault();
+		e.target.value === ''
+			? setNamevalid(
+					<>
+						<i className="fa-solid fa-circle-exclamation"></i>
+						<span> Please input your name</span>
+					</>
+			  )
+			: setNamevalid(true);
+	};
+	const emailInvalid = e => {
+		e.preventDefault();
+		e.target.value.length < 6 ||
+		!e.target.value.includes('@') ||
+		!e.target.value.includes('.')
+			? setEmailvalid(
+					<>
+						<i className="fa-solid fa-circle-exclamation"></i>
+						<span> Please input a valid email</span>
+					</>
+			  )
+			: setEmailvalid(true);
+	};
+	const messageInvalid = e => {
+		e.preventDefault();
+		e.target.value === ''
+			? setMessagevalid(
+					<>
+						<i className="fa-solid fa-circle-exclamation"></i>
+						<span> Please input a message</span>
+					</>
+			  )
+			: setMessagevalid(true);
+	};
 	return (
 		<>
 			<Navbar />
@@ -36,39 +73,53 @@ const Contact = () => {
 						value="Portfolio-latest Form Submit"
 					/>
 					<input type="hidden" name="_captcha" value="false" />
-					<input
-						type="text"
-						name="name"
-						id="name"
-						placeholder="Name"
-						required
-					/>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						placeholder="Email Address"
-						required
-						onInvalid={nameInavalid}
-					/>
-					<select name="subject" id="subject" defaultValue={'subject'}>
-						<option value="subject" disabled>
-							Subject (optional)
-						</option>
-						<option value="frontend">Frontend Developer</option>
-						<option value="backend">Backend Developer</option>
-						<option value="fullstack">Fullstack Developer</option>
-						<option value="ux/ui">UX/UI Designer</option>
-						<option value="product">Product Designer</option>
-						<option value="writer">Technical Writer</option>
-					</select>
+					<div className="inputerrorcontainer">
+						<input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Name"
+							required
+							onInvalid={nameInvalid}
+							onBlur={nameInvalid}
+						/>
+						{<p className="formvalid">{namevalid}</p>}
+					</div>
+					<div className="inputerrorcontainer">
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Email Address"
+							required
+							onInvalid={emailInvalid}
+							onBlur={emailInvalid}
+						/>
+						{<p className="formvalid">{emailvalid}</p>}
+					</div>
+						<select name="subject" id="subject" defaultValue={'subject'}>
+							<option value="subject" disabled>
+								Subject (optional)
+							</option>
+							<option value="frontend">Frontend Developer</option>
+							<option value="backend">Backend Developer</option>
+							<option value="fullstack">Fullstack Developer</option>
+							<option value="ux/ui">UX/UI Designer</option>
+							<option value="product">Product Designer</option>
+							<option value="writer">Technical Writer</option>
+							<option value="other">Others</option>
+						</select>
 					<textarea
 						name="message"
 						id="message"
 						cols="30"
 						rows="10"
 						placeholder="Your mesasage here..."
+						required
+						onInvalid={messageInvalid}
+						onBlur={messageInvalid}
 					></textarea>
+					{<p className="formvalid messagevalid">{messagevalid}</p>}
 					<input type="submit" value="SEND MESSAGE" />
 				</form>
 				<section className="contact-social-links">
@@ -82,20 +133,20 @@ const Contact = () => {
 						Github
 					</a>
 					<a
+						href="https://www.linkedin.com/in/toyib-lawal/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<i className="fab fa-linkedin"></i>
+						Linkedin
+					</a>
+					<a
 						href="https://twitter.com/_GeekyCoder_"
 						target="_blank"
 						rel="noreferrer"
 					>
 						<i className="fab fa-twitter"></i>
 						Twitter
-					</a>
-					<a
-						href="https://geekycoder25.github.io"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img src={profile} alt="" />
-						Porfolio
 					</a>
 					<a
 						href="https://facebook.com/lawal.toyyib.7"

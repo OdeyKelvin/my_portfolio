@@ -35,7 +35,7 @@ const Skills = () => {
 							React
 						</p>
 						<p className="image next-logo">
-							<img src={next} alt="next" />
+							<img src={next} alt="next" style={{ objectFit: 'contain' }} />
 							Next JS
 						</p>
 						<p className="image jq-logo">

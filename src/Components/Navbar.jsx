@@ -124,6 +124,13 @@ const Navbar = () => {
 							<i className="fab fa-github"></i>
 						</a>
 						<a
+							href="https://www.linkedin.com/in/toyib-lawal/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<i className="fab fa-linkedin"></i>
+						</a>
+						<a
 							href="https://twitter.com/_GeekyCoder_"
 							target="_blank"
 							rel="noreferrer"
@@ -136,13 +143,6 @@ const Navbar = () => {
 							rel="noreferrer"
 						>
 							<i className="fab fa-facebook"></i>
-						</a>
-						<a
-							href="https://instagram.com/_geeky_coder_"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<i className="fab fa-instagram"></i>
 						</a>
 					</div>
 					<p>&copy; Geeky Coder, All rights reserved</p>
