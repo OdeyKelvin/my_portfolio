@@ -97,6 +97,7 @@ const Contact = () => {
 						/>
 						{<p className="formvalid">{emailvalid}</p>}
 					</div>
+					<div>
 						<select name="subject" id="subject" defaultValue={'subject'}>
 							<option value="subject" disabled>
 								Subject (optional)
@@ -109,6 +110,7 @@ const Contact = () => {
 							<option value="writer">Technical Writer</option>
 							<option value="other">Others</option>
 						</select>
+					</div>
 					<textarea
 						name="message"
 						id="message"

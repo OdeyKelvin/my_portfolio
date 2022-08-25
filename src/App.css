@@ -773,6 +773,7 @@ textarea {
 	resize: none;
 	font-family: inherit;
 	width: 100%;
+	padding-bottom: 15px;
 }
 .contact textarea::placeholder {
 	font-size: 1rem;
@@ -805,8 +806,7 @@ textarea {
 	grid-column: 1 / -1;
 }
 .contact .messagevalid {
-	transform: translateY(-10
-	px);
+	transform: translateY(-10 px);
 }
 .contact .inputerrorcontainer .fa-solid,
 .contact .inputerrorcontainer span {
@@ -948,21 +948,16 @@ textarea {
 	color: black;
 }
 /* resume style */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+
 @page {
 	size: A4;
 	margin: 0;
 }
 .resume {
 	display: flex;
-	width: 70vw;
 	margin: auto;
-	width: 210mm;
-	height: 297mm;
+	max-width: 210mm;
+	min-height: 297mm;
 	box-shadow: 0 10px 8px rgb(0 0 0 / 0.04), 0 4px 3px rgb(0 0 0 / 0.1);
 }
 .resume aside {
