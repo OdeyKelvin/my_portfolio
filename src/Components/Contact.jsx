@@ -111,17 +111,19 @@ const Contact = () => {
 							<option value="other">Others</option>
 						</select>
 					</div>
-					<textarea
-						name="message"
-						id="message"
-						cols="30"
-						rows="10"
-						placeholder="Your mesasage here..."
-						required
-						onInvalid={messageInvalid}
-						onBlur={messageInvalid}
-					></textarea>
-					{<p className="formvalid messagevalid">{messagevalid}</p>}
+					<div className='textarea'>
+						<textarea
+							name="message"
+							id="message"
+							cols="30"
+							rows="5"
+							placeholder="Your mesasage here..."
+							required
+							onInvalid={messageInvalid}
+							onBlur={messageInvalid}
+						></textarea>
+						{<p className="formvalid messagevalid">{messagevalid}</p>}
+					</div>
 					<input type="submit" value="SEND MESSAGE" />
 				</form>
 				<section className="contact-social-links">
