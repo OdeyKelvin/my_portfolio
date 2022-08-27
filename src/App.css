@@ -24,7 +24,7 @@ body {
 	font-family: 'Space Grotesk';
 }
 .App {
-	max-width: 2000px;
+	max-width: 2500px;
 	margin: auto;
 	height: 100%;
 	min-height: 100vh;
@@ -239,7 +239,7 @@ main > img {
 /* nav styles  */
 nav {
 	width: 100%;
-	max-width: 2000px;
+	max-width: 2500px;
 	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
