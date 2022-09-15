@@ -1,3 +1,4 @@
+import mabifus from '../images/mabifus.jpg';
 import qoreeb from '../images/qoreeb2.jpg';
 import dee from '../images/dees-estate.jpg';
 import skillers from '../images/skillers.jpg';
@@ -26,34 +27,39 @@ const Projects = () => {
 				<h1>Projects Preview</h1>
 				<section className="previews-section">
 					<Project
-						link="https://qoreeb.vercel.app/"
+						link="https://mabifus.vercel.app"
+						img={mabifus}
+						src={'https://github.com/GeekyCoder25/mabifus'}
+					/>
+					<Project
+						link="https://qoreeb.vercel.app"
 						img={qoreeb}
-						src={'https://github.com/GeekyCoder25/Qoreebullah-Portfolio/'}
+						src={'https://github.com/GeekyCoder25/Qoreebullah-Portfolio'}
 					/>
 					<Project
 						link="https://geekycoder25.github.io/Dees-Estate"
 						img={dee}
-						src={'https://github.com/GeekyCoder25/Dees-Estate/'}
+						src={'https://github.com/GeekyCoder25/Dees-Estate'}
 					/>
 					<Project
-						link="https://geekycoder25.github.io/Skillers/"
+						link="https://geekycoder25.github.io/Skillers"
 						img={skillers}
-						src={'https://github.com/GeekyCoder25/Skillers/'}
+						src={'https://github.com/GeekyCoder25/Skillers'}
 					/>
 					<Project
-						link="https://geekycoder25.github.io/MagVerse/"
+						link="https://geekycoder25.github.io/MagVerse"
 						img={metaverse}
-						src={'https://github.com/GeekyCoder25/MagVerse/'}
+						src={'https://github.com/GeekyCoder25/MagVerse'}
 					/>
 					<Project
-						link="https://geekycoder25.github.io/Snap/"
+						link="https://geekycoder25.github.io/Snap"
 						img={snap}
-						src={'https://github.com/GeekyCoder25/Snap/'}
+						src={'https://github.com/GeekyCoder25/Snap'}
 					/>
 					<Project
-						link="https://geekycoder25.github.io/AptLearn/"
+						link="https://geekycoder25.github.io/AptLearn"
 						img={aptlearn}
-						src={'https://github.com/GeekyCoder25/AptLearn/'}
+						src={'https://github.com/GeekyCoder25/AptLearn'}
 					/>
 					<div
 						className="projects-angles projects-angles-left"

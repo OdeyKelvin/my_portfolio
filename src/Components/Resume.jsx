@@ -162,6 +162,11 @@ const Home = () => {
 					<p>Some of past projects include:</p>
 					<ul className="links">
 						<li>
+							<a href="https://mabifus.vercel.app/" rel="noreferrer">
+								Mabifus Health Care   
+							</a>
+						</li>
+						<li>
 							<a href="https://toyib.vercel.app/" rel="noreferrer">
 								Portfolio
 							</a>

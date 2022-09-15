@@ -111,7 +111,7 @@ const Contact = () => {
 							<option value="other">Others</option>
 						</select>
 					</div>
-					<div className='textarea'>
+					<div className="textarea">
 						<textarea
 							name="message"
 							id="message"

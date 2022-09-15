@@ -61,6 +61,8 @@ const Skills = () => {
 							<div>
 								<h1>Internship at Crediometer</h1>
 								<p>Implemented UI Components and making use of API calls</p>
+								<h1>Personal Project | Mabifus Health Care</h1>
+								<p>A health care website using with user authentication using Next JS</p>
 								<h1>Personal Project | User Portfolio</h1>
 								<p>Qoreeb Portfolio</p>
 								<h1>Personal Project | AptLearn</h1>
