@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-const Navbar = () => {
+const Navbar = ({ handleMode }) => {
 	const { pathname } = useLocation();
+	const colorSchemeRef = useRef();
 	let width = window.innerWidth;
-	const handleMenu = () => {
+	const handleamburger = () => {
 		const navbar = document.querySelector('nav');
 		const navlinks = document.querySelector('.navlinks');
 		const alinks = document.querySelectorAll('nav ul li');
@@ -16,18 +17,13 @@ const Navbar = () => {
 		navbar.classList.add('navbackdropfilterunset');
 		const blur = document.querySelector('.blur');
 		if (width <= 1000) blur.classList.add('bluractive');
+		setTimeout(() => {
+			colorSchemeRef.current.classList.add('colorSchemeMobile');
+		}, 380);
+		document.body.classList.add('navbodymobile');
 	};
-	useEffect(() => {
-		let navbar = document.querySelector('nav');
-		if (
-			pathname !== `/skills` &&
-			pathname !== `/certficates` &&
-			pathname !== `/contact`
-		) {
-			navbar.classList.remove('navscroll');
-		}
-	}, [pathname]);
-	const handleClose = () => {
+
+	const handleHamburgerClose = () => {
 		const navbar = document.querySelector('nav');
 		const navlinks = document.querySelector('.navlinks');
 		let alinks = document.querySelectorAll('nav ul li');
@@ -40,31 +36,46 @@ const Navbar = () => {
 		const blur = document.querySelector('.blur');
 		blur.classList.remove('bluractive');
 		navbar.classList.remove('navbackdropfilterunset');
+		colorSchemeRef.current.classList.remove('colorSchemeMobile');
+		document.body.classList.remove('navbodymobile');
 	};
 	useEffect(() => {
 		const blur = document.querySelector('.blur');
-		blur.addEventListener('click', () => {
-			handleClose();
-		});
+		pathname !== '/resume' &&
+			blur.addEventListener('click', () => {
+				handleHamburgerClose();
+			});
 	});
+	useEffect(() => {
+		let navbar = document.querySelector('nav');
+		if (
+			pathname !== `/skills` &&
+			pathname !== `/certficates` &&
+			pathname !== `/resume` &&
+			pathname !== `/contact`
+		) {
+			navbar.classList.remove('navscroll');
+		}
+	}, [pathname]);
 	useEffect(() => {
 		let navbar = document.querySelector('nav');
 		let navheader = document.querySelector('nav h1');
 		let navheaderstroke = document.querySelectorAll('nav h1 span');
-		window.addEventListener('scroll', () => {
-			if (window.scrollY > 50 && width <= 1000) {
-				navbar.classList.add('navscrollmobile');
-				navheader.classList.add('navheader');
-				navheaderstroke[1].classList.replace('ib', 'navheaderstroke');
-			} else if (window.scrollY > 50 && width > 1000) {
-				navbar.classList.add('navscroll');
-			} else {
-				navbar.classList.remove('navscrollmobile');
-				navheader.classList.remove('navheader');
-				navheaderstroke[1].classList.replace('navheaderstroke', 'ib');
-			}
-		});
-	}, [width]);
+		pathname !== '/resume' &&
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 50 && width <= 1000) {
+					navbar.classList.add('navscrollmobile');
+					navheader.classList.add('navheader');
+					navheaderstroke[1].classList.replace('ib', 'navheaderstroke');
+				} else if (window.scrollY > 50 && width > 1000) {
+					navbar.classList.add('navscroll');
+				} else {
+					navbar.classList.remove('navscrollmobile');
+					navheader.classList.remove('navheader');
+					navheaderstroke[1].classList.replace('navheaderstroke', 'ib');
+				}
+			});
+	}, [width, pathname]);
 
 	useEffect(() => {
 		const blur = document.querySelector('.blur');
@@ -81,6 +92,7 @@ const Navbar = () => {
 					alinks.forEach(i => {
 						i.classList.remove('alinks');
 						blur.classList.remove('bluractive');
+						handleHamburgerClose();
 					});
 				});
 			});
@@ -88,74 +100,83 @@ const Navbar = () => {
 	});
 
 	return (
-		<nav>
-			<Link to={'/home'}>
-				<h1>
-					<span>TOY</span>
-					<span className="ib">IB</span>
-				</h1>
-			</Link>
-			<ul className="navlinks">
-				<li className="first-child">
-					<NavLink to={`/home`}>Home</NavLink>
-				</li>
-				<li>
-					<NavLink to={`/skills`}>Skills</NavLink>
-				</li>
-				<li>
-					<NavLink to={`/projects`}>Projects</NavLink>
-				</li>
-				<li>
-					<NavLink to={`/about`}>About me</NavLink>
-				</li>
-				<li>
-					<NavLink to={`/certificates`}>Certificates</NavLink>
-				</li>
-				<li>
-					<NavLink to={`/contact`}>Contact</NavLink>
-				</li>
-				<section className="navfooter">
-					<div>
-						<a
-							href="https://github.com/geekycoder25"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<i className="fab fa-github"></i>
-						</a>
-						<a
-							href="https://www.linkedin.com/in/toyib-lawal/"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<i className="fab fa-linkedin"></i>
-						</a>
-						<a
-							href="https://twitter.com/_GeekyCoder_"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<i className="fab fa-twitter"></i>
-						</a>
-						<a
-							href="https://facebook.com/lawal.toyyib.7"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<i className="fab fa-facebook"></i>
-						</a>
-					</div>
-					<p>&copy; Geeky Coder, All rights reserved</p>
-				</section>
-			</ul>
+		pathname !== '/resume' && (
+			<nav>
+				<Link to={'/home'}>
+					<h1>
+						<span>TOY</span>
+						<span className="ib">IB</span>
+					</h1>
+				</Link>
+				<ul className="navlinks">
+					<li className="first-child">
+						<NavLink to={`/home`}>Home</NavLink>
+					</li>
+					<li>
+						<NavLink to={`/skills`}>Skills</NavLink>
+					</li>
+					<li>
+						<NavLink to={`/projects`}>Projects</NavLink>
+					</li>
+					<li>
+						<NavLink to={`/about`}>About me</NavLink>
+					</li>
+					<li>
+						<NavLink to={`/certificates`}>Certificates</NavLink>
+					</li>
+					<li>
+						<NavLink to={`/contact`}>Contact</NavLink>
+					</li>
+					<section className="navfooter">
+						<div>
+							<a
+								href="https://github.com/geekycoder25"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<i className="fab fa-github"></i>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/toyib-lawal/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<i className="fab fa-linkedin"></i>
+							</a>
+							<a
+								href="https://twitter.com/_GeekyCoder_"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<i className="fab fa-twitter"></i>
+							</a>
+							<a
+								href="https://facebook.com/lawal.toyyib.7"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<i className="fab fa-facebook"></i>
+							</a>
+						</div>
+						<p>&copy; Geeky Coder, All rights reserved</p>
+					</section>
+				</ul>
+				<div
+					className="colorSchemeMobileHide"
+					ref={colorSchemeRef}
+					onClick={() => handleHamburgerClose()}
+				>
+					<i className="fas fa-toggle-on" onClick={handleMode}></i>
+				</div>
 
-			<div className="bars" onClick={handleMenu}>
-				<i className="fas fa-grip-lines"></i>
-			</div>
-			<div className="xmark" onClick={handleClose}>
-				<i className="fas fa-xmark"></i>
-			</div>
-		</nav>
+				<div className="bars" onClick={handleamburger}>
+					<i className="fas fa-grip-lines"></i>
+				</div>
+				<div className="xmark" onClick={handleHamburgerClose}>
+					<i className="fas fa-xmark"></i>
+				</div>
+			</nav>
+		)
 	);
 };
 

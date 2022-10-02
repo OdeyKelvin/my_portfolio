@@ -7,7 +7,6 @@ import narutoPull from '../images/naruto-pull.gif';
 // import moshi from '../audio/Moshi Moshi - Shinobu Kocho.mp3';
 import Footer from './Footer';
 import Socials from './Socials';
-import Navbar from './Navbar';
 
 const Home = () => {
 	const mousemove = event => {
@@ -38,6 +37,7 @@ const Home = () => {
 		);
 	};
 	useEffect(() => {
+		const vw = window.screen.width;
 		const homePage = document.querySelector('.home-page');
 		homePage.classList.add('bg-style-none');
 		if (window.innerWidth > 1000) {
@@ -47,11 +47,18 @@ const Home = () => {
 		} else {
 			homePage.classList.remove('bg-style-none');
 		}
-		setTimeout(() => {
-			window.addEventListener('mousemove', mousemove);
-		}, 4000);
+		setTimeout(
+			() => {
+				window.addEventListener('mousemove', mousemove);
+			},
+			vw > 1000 ? 4000 : 0
+		);
 		return () => {
 			window.removeEventListener('mousemove', mousemove);
+			document.documentElement.style.setProperty(
+				'--animation',
+				'rotateZ(0deg)'
+			);
 		};
 	}, []);
 
@@ -76,62 +83,59 @@ const Home = () => {
 	};
 
 	return (
-		<>
-			<Navbar />
-			<main>
-				<img src={narutoPull} alt="narutoPull" />
-				<section className="bg-style-container">
-					<div className="bg-style-small"></div>
-					<div className="bg-style-xsmall"></div>
-					<div className="bg-style"></div>
-					<div className="bg-style-small bg-style-small-half"></div>
-					<img src={profile} alt="profile" />
-				</section>
-				<article className="home-page">
-					<div className="hello">
-						<i>👋</i>
-						<span>
-							Hello, I am <br /> <b>Toyib</b>
-						</span>
-					</div>
-					<div className="hello-sub">
-						<span>Fullstack developer</span>
-						<span>Tech Enthusiast</span>
-					</div>
-					<div className="home-elements-container">
-						<Link to={`/projects`}>
-							<div className="home-projects">
-								<div className="home-projects-white">
-									<i className="fas fa-diagram-project"></i>
-								</div>
-								Projects
+		<main>
+			<img src={narutoPull} alt="narutoPull" />
+			<section className="bg-style-container">
+				<div className="bg-style-small"></div>
+				<div className="bg-style-xsmall"></div>
+				<div className="bg-style"></div>
+				<div className="bg-style-small bg-style-small-half"></div>
+				<img src={profile} alt="profile" />
+			</section>
+			<article className="home-page">
+				<div className="hello">
+					<i>👋</i>
+					<span>
+						Hello, I am <br /> <b>Toyib</b>
+					</span>
+				</div>
+				<div className="hello-sub">
+					<span>Fullstack developer</span>
+					<span>Tech Enthusiast</span>
+				</div>
+				<div className="home-elements-container">
+					<Link to={`/projects`}>
+						<div className="home-projects">
+							<div className="home-projects-white">
+								<i className="fas fa-diagram-project"></i>
 							</div>
-						</Link>
-						<Link to={`/about`}>
-							<div className="home-about">
-								<img src={profile} alt="profile" />
-								About
+							Projects
+						</div>
+					</Link>
+					<Link to={`/about`}>
+						<div className="home-about">
+							<img src={profile} alt="profile" />
+							About
+						</div>
+					</Link>
+					<Link to={`/contact`}>
+						<div className="home-contact">
+							<div className="home-contact-white">
+								<i
+									className="fas fa-address-book"
+									onMouseOver={handleHomeContact}
+									onMouseLeave={handleHomeContactRemove}
+								></i>
 							</div>
-						</Link>
-						<Link to={`/contact`}>
-							<div className="home-contact">
-								<div className="home-contact-white">
-									<i
-										className="fas fa-address-book"
-										onMouseOver={handleHomeContact}
-										onMouseLeave={handleHomeContactRemove}
-									></i>
-								</div>
-								Contact
-							</div>
-						</Link>
-						{/* <audio src={ohayo} id="audio1"></audio> */}
-					</div>
-					<Socials />
-					<Footer />
-				</article>
-			</main>
-		</>
+							Contact
+						</div>
+					</Link>
+					{/* <audio src={ohayo} id="audio1"></audio> */}
+				</div>
+				<Socials />
+				<Footer />
+			</article>
+		</main>
 	);
 };
 

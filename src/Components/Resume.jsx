@@ -1,4 +1,4 @@
-import mine from '../images/mine.jpg';
+// import mine from '../images/mine.jpg';
 import html from '../images/html.png';
 import css from '../images/css.png';
 import js from '../images/JS.png';
@@ -6,6 +6,9 @@ import react from '../images/react.png';
 import next from '../images/next.png';
 import typescript from '../images/typescript.png';
 import jquery from '../images/jquery.svg';
+import node from '../images/node.png';
+import express from '../images/express.png';
+import mongodb from '../images/mongodb.png';
 import git from '../images/git.svg';
 
 const Home = () => {
@@ -13,7 +16,7 @@ const Home = () => {
 		<div className="resume">
 			<aside>
 				<section className="profile">
-					<img src={mine} alt="mine" className="mine" />
+					{/* <img src={mine} alt="mine" className="mine" /> */}
 					<h1>Toyib Lawal</h1>
 					<p>Front-End Developer</p>
 					<div>
@@ -62,9 +65,9 @@ const Home = () => {
 						<p>Computer Engineering</p>
 						<p className="school">Bayero University</p>
 
-						<p>
+						{/* <p>
 							<i className="fas fa-calendar"></i>2020 - Present
-						</p>
+						</p> */}
 						<p>
 							<i className="fas fa-location-dot"></i>Kano, Nigeria
 						</p>
@@ -87,7 +90,7 @@ const Home = () => {
 						<img src={typescript} alt="typescript" />
 						Typescript
 					</p>
-					<h2>Libraries</h2>
+					<h2>Libraries & Frameworks</h2>
 					<p className="image">
 						<img src={react} alt="react" />
 						React
@@ -100,9 +103,21 @@ const Home = () => {
 						<img src={next} alt="next" />
 						Next JS
 					</p>
-					<p className="image">
+					<p className="image" style={{ marginBottom: '10px' }}>
 						<img src={jquery} alt="jquery" />
 						jQuery
+					</p>
+					<p className="image">
+						<img src={node} alt="node" />
+						Node
+					</p>
+					<p className="image">
+						<img src={express} alt="express" />
+						Express
+					</p>
+					<p className="image">
+						<img src={mongodb} alt="mongodb" />
+						Mongodb
 					</p>
 					<h2>CI/CD</h2>
 					<p className="image">
@@ -163,7 +178,7 @@ const Home = () => {
 					<ul className="links">
 						<li>
 							<a href="https://mabifus.vercel.app/" rel="noreferrer">
-								Mabifus Health Care   
+								Mabifus Health Care
 							</a>
 						</li>
 						<li>
