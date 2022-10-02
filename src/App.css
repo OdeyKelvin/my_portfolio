@@ -34,6 +34,7 @@ body {
 	--navlinkColor: var(--textColor);
 	--borderColor: rgba(255, 255, 255, 1);
 	--boxShadow: rgba(0, 0, 0, 1);
+	--projectsBoxShadow: rgba(0, 0, 0, 1);
 	--aboutBoxShadow: #000;
 	background-color: var(--backgroundColor);
 }
@@ -47,6 +48,7 @@ body {
 	--navlinkColor: rgb(131, 137, 141);
 	--borderColor: rgba(0, 0, 0, 0.5);
 	--boxShadow: rgb(128, 164, 192);
+	--projectsBoxShadow: rgb(179, 179, 179);
 	--aboutBoxShadow: rgb(207 207 207);
 }
 .App {
@@ -948,7 +950,7 @@ textarea {
 	border-radius: 10px;
 	max-height: 50vh;
 	max-width: 40vw;
-	box-shadow: 20px 100px 50px rgb(179, 179, 179);
+	box-shadow: 20px 100px 50px var(--projectsBoxShadow);
 }
 
 .project .projects-angles {
