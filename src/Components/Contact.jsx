@@ -126,7 +126,7 @@ const Contact = () => {
 			<section className="contact-social-links">
 				<div>Contact me on my social links</div>
 				<a
-					href="https://geekycoder25.github.io/Portfolio/"
+					href="https://github.com/geekycoder25"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -134,7 +134,7 @@ const Contact = () => {
 					Github
 				</a>
 				<a
-					href="https://www.linkedin.com/in/toyib-lawal/"
+					href="https://www.linkedin.com/in/toyib-lawal"
 					target="_blank"
 					rel="noreferrer"
 				>
