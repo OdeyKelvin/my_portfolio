@@ -82,7 +82,7 @@ const Skills = () => {
 							</p>
 							<h1>Personal Project | User Portfolio</h1>
 							<p>Qoreeb Portfolio</p>
-							<h1>Personal Project | a ptLearn</h1>
+							<h1>Personal Project | aptLearn</h1>
 							<p>AptLearn Homepage challenge by APtlearn ceo</p>
 						</div>
 					</div>

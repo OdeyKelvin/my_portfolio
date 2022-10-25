@@ -104,7 +104,7 @@ const Navbar = ({ handleMode }) => {
 			<nav>
 				<Link to={'/home'}>
 					<h1>
-						<span>TOY</span>
+						<span>TOYY</span>
 						<span className="ib">IB</span>
 					</h1>
 				</Link>

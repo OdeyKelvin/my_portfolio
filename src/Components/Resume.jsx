@@ -17,7 +17,7 @@ const Home = () => {
 			<aside>
 				<section className="profile">
 					{/* <img src={mine} alt="mine" className="mine" /> */}
-					<h1>Toyib Lawal</h1>
+					<h1>Toyyib Lawal</h1>
 					<p>Front-End Developer</p>
 					<div>
 						<a

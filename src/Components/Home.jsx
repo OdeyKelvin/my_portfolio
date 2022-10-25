@@ -96,7 +96,7 @@ const Home = () => {
 				<div className="hello">
 					<i>👋</i>
 					<span>
-						Hello, I am <br /> <b>Toyib</b>
+						Hello, I am <br /> <b>Toyyib</b>
 					</span>
 				</div>
 				<div className="hello-sub">

@@ -21,10 +21,10 @@ const Firstpage = () => {
 	});
 	return (
 		<article className="first-page">
-			<img src={mine} alt="Toyib" />
+			<img src={mine} alt="Toyyib" />
 			<h1>
 				<span className="welcome">WELCOME</span>
-				You're accessing Toyib Lawal's Portfolio, hope you have a nice time👋{' '}
+				You're accessing Toyyib Lawal's Portfolio, hope you have a nice time👋{' '}
 				<br />
 				<Link to="" onKeyUp={handleNavigate}>
 					<i className="fas fa-angles-down" onClick={handleNavigate}></i>
