@@ -104,8 +104,8 @@ const Navbar = ({ handleMode }) => {
 			<nav>
 				<Link to={'/home'}>
 					<h1>
-						<span>TOYY</span>
-						<span className="ib">IB</span>
+						<span>MA</span>
+						<span className="ib">Rk</span>
 					</h1>
 				</Link>
 				<ul className="navlinks">
@@ -130,35 +130,35 @@ const Navbar = ({ handleMode }) => {
 					<section className="navfooter">
 						<div>
 							<a
-								href="https://github.com/geekycoder25"
+								href="/"
 								target="_blank"
 								rel="noreferrer"
 							>
 								<i className="fab fa-github"></i>
 							</a>
 							<a
-								href="https://www.linkedin.com/in/toyib-lawal/"
+								href="/"
 								target="_blank"
 								rel="noreferrer"
 							>
 								<i className="fab fa-linkedin"></i>
 							</a>
 							<a
-								href="https://twitter.com/_GeekyCoder_"
+								href="/"
 								target="_blank"
 								rel="noreferrer"
 							>
 								<i className="fab fa-twitter"></i>
 							</a>
 							<a
-								href="https://facebook.com/lawal.toyyib.7"
+								href="/"
 								target="_blank"
 								rel="noreferrer"
 							>
 								<i className="fab fa-facebook"></i>
 							</a>
 						</div>
-						<p>&copy; Geeky Coder, All rights reserved</p>
+						<p>&copy; Mark Coder, All rights reserved</p>
 					</section>
 				</ul>
 				<div

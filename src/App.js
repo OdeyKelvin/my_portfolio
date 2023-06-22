@@ -10,7 +10,6 @@ import './fontawesome-free-6.1.1-web/css/all.css';
 import ScrollToTop from './components/ScrollToTop';
 import Firstpage from './components/Firstpage';
 import Home from './components/Home';
-import Certificates from './components/Certificates';
 import Skills from './components/Skills';
 import Sidenav from './components/Sidenav';
 import Contact from './components/Contact';
@@ -54,7 +53,6 @@ function App() {
 					<Route path="/home" element={<Home />} />
 					<Route path="/projects" element={<Projects />} />
 					<Route path="/skills" element={<Skills />} />
-					<Route path="/certificates" element={<Certificates />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/submit" element={<Submit />} />
 					<Route path="/about" element={<About />} />

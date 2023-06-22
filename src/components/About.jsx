@@ -25,7 +25,7 @@ const About = () => {
 						currently expanding my knowledge and skillset. I'm currently open up
 						to work and Interships.
 					</p>
-					<a href="https://drive.google.com/file/d/1v-v_5hswC6SfGum7gXi72iWjkpm_jqCv/view?usp=sharing">
+					<a href="/">
 						Open Resume
 					</a>
 				</div>

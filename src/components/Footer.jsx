@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
 		<section className="copyright">
-			&copy; Geeky Coder <br /> All Rights Reserved
+			&copy; Mark Coder <br /> All Rights Reserved
 		</section>
 	);
 };

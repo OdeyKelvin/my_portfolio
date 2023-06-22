@@ -50,19 +50,19 @@ const Contact = () => {
 			<div className="button">
 				<a href="mailto:toyibe25@gmail.com">
 					<img src={message} alt="email" />
-					toyibe25@gmail.com
+					markworld428@gmail.com
 				</a>
 
 				<a href="https://wa.link/acx3ha" target="_blank" rel="noreferrer">
 					<img src={phone} alt="phone" />
-					(+234) 907 - 300 - 2599
+				
 				</a>
 			</div>
-			<form action="https://formsubmit.co/toyibe25@gmail.com" method="POST">
+			<form action="https://formsubmit.co/markworld428@gmail.com" method="POST">
 				<input
 					type="hidden"
 					name="_next"
-					value="https://toyib.vercel.app/submit"
+					value="/"
 				/>
 				<input
 					type="hidden"
@@ -126,7 +126,7 @@ const Contact = () => {
 			<section className="contact-social-links">
 				<div>Contact me on my social links</div>
 				<a
-					href="https://github.com/geekycoder25"
+					href="/"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -134,7 +134,7 @@ const Contact = () => {
 					Github
 				</a>
 				<a
-					href="https://www.linkedin.com/in/toyib-lawal"
+					href="/"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -142,7 +142,7 @@ const Contact = () => {
 					Linkedin
 				</a>
 				<a
-					href="https://twitter.com/_GeekyCoder_"
+					href="/_"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -150,7 +150,7 @@ const Contact = () => {
 					Twitter
 				</a>
 				<a
-					href="https://facebook.com/lawal.toyyib.7"
+					href="/"
 					target="_blank"
 					rel="noreferrer"
 				>
