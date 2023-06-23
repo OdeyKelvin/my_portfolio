@@ -5,10 +5,7 @@ const Project = props => {
 				<img src={props.img} alt='logo' className='previews-logo' />
 			</a>
 			<p>
-				Source Code{' '}
-				<a href={props.src} target='_blank' rel='noreferrer'>
-					here
-				</a>
+				
 				<br />
 				Click on image to display preview
 			</p>
